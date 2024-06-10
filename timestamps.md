@@ -4,7 +4,7 @@
 # 00:16:53  -  Save and work on GitHub
 # 00:27:14  -  Let const var
 # 00:43:54  -  Datatypes and ECMA standards
-# 01:01:55  -  Datatyope conversion confusion
+# 01:01:55  -  Datatype conversion confusion
 # 01:14:46 -  Why string to number
 # 01:29:46  -  comparison of datatypes
 # 01:38:38 -  datatypes summary
