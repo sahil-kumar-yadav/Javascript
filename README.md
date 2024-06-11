@@ -1,5 +1,6 @@
 # Javascript (Documentation MDN(mozilla) / [tc39.es(orginal)](https://tc39.es/ecma262/#sec-ecmascript-standard-built-in-objects))
 
+# Javascript - Object and Event (80%)
 # lec - 1 Setting up environment
 
 - nodejs -> javascript runtime environment. phele hume javascript ko dekhne/sikhne ky liye index.js file banani padti thi or fir console my dekhna padta tha but abh hum bina browser ky javascript ko run kar skte hai nodejs ki help sy jese cpp or python ky liye bhi unka environment aata aata hai vese he javascript ky liye nodejs/denojs environment hai (dono same he founder ky hai)
@@ -37,3 +38,15 @@
 # 02:52:34  -  date and time
 
 # 03:10:47  -  Array in javascript
+
+- shallow copy --> same reference
+- deep copy -> not same refrences
+
+
+# 04:21:13  -  Objects destructuring and JSON API
+- object destructuring --> {} use karke direct object ki property use karna without dot operator 
+- JSON - Javascript object notation
+- api sy aata hai - basicall object without name or object jesa he dikhta hai
+- my github api --> https://api.github.com/users/username
+- random user api - https://randomuser.me/api/
+- got to json formator tool --> tree form choose karo acche sy smj aayega
