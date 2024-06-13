@@ -1,6 +1,0 @@
-// if statement
-
-
-if (condition) {
-    
-}

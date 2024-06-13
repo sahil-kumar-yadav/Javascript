@@ -76,3 +76,20 @@
 # 05:55:33 -  How does javascript works behind the scene
 
 - review it once
+
+
+# 06:21:45  - Control flow in javascript
+- har baar hum pura code execute nahi karna chate , hume chaheye control thats why we use control and flow statement
+-  if break statement is not there all below code will be executed except defult
+
+
+# falsy values 
+
+- false, 0, -0 , "", 0n, null , undefined , NaN 
+
+# truthy value
+
+ - "0" , 'false', " "(space) , [] , {} , function(){} 
+
+
+
