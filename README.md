@@ -50,3 +50,29 @@
 - my github api --> https://api.github.com/users/username
 - random user api - https://randomuser.me/api/
 - got to json formator tool --> tree form choose karo acche sy smj aayega
+
+
+# 04:34:46  -  Functions and parameters
+
+# 05:05:14  -  Global and local scope
+
+- var --> global scope isko {} sy fark nahi padta
+- let , const ka block scope hai , yeh scope tak he valid rahta hai
+
+# 05:14:51  -   Scope level and mini hoisting
+
+- clouser property --> In case of nested functions inner functions can access the property of/ varible of outer function i.e child function can access property of parent
+
+# 05:29:47 -  this and arrow function
+
+- when refering to current context we use this keyword
+- browser ky ander my jo global object hai vo hai window object
+
+# 05:48:16  -  Immediately invoked function
+- 1 sy jayada IIFE likhne ky ly semicolone lagna bhut jaruri hai
+- named iife -> function with name in ()()
+- Unnamed iife -> arrow function in ()()
+
+# 05:55:33 -  How does javascript works behind the scene
+
+- review it once
