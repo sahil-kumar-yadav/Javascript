@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #363636; color: white;">
+    
+</body>
+
+<script>
+    const div = document.createElement('div')
+    console.log(div)
+    div.className = "myclass"
+    div.id = Math.round(Math.random()  + 1)
+    div.setAttribute("title","generated title") // key value pair
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    // div.innerText = "Heloo Duniya" // replace karta hai --> phele fetch karta hai fir override karta hai
+    const textNode = document.createTextNode("this is a text Node")
+    const textNode2 = document.createTextNode("this is a text Node 2")
+    // console.log(textNode) // simple text return karta hai
+    div.appendChild(textNode)
+    div.appendChild(textNode2)
+    document.body.appendChild(div)
+    
+
+
+</script>
+</html>
