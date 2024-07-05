@@ -1,0 +1,9 @@
+*{
+    background: rgb(240 231 231);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

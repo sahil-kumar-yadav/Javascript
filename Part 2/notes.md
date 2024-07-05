@@ -23,3 +23,5 @@
 
 # 00:59:58  -  How to create a new element
 // 1.52
+
+# Use Git bash to create multiple files
