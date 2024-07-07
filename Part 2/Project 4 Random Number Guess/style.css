@@ -1,0 +1,86 @@
+body {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+h1 {
+    background: linear-gradient(to right, #ff512f, #dd2476);
+    color: white;
+    margin: 0;
+    padding: 10px;
+    border-radius: 15px 15px 0 0;
+}
+
+form {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 50%;
+}
+
+button {
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #5b86e5, #36d1dc);
+}
+
+.showGuess, .showHint, .result {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.btn {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #feb47b, #ff7e5f);
+}
+
+.btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}

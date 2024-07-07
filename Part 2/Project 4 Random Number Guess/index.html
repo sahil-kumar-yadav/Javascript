@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Guess</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Guess the random number</h1>
+        <form>
+            <label for="userInput">Enter the Number</label>
+            <input type="number"  id="userInput" placeholder="Enter the Guess" required minlength="1" maxlength="3" min="1" max="100">
+            <button type="submit" id="submitGuess">Submit</button>
+        </form>
+        <div class="showGuess">
+
+        </div>
+        <div class="showHint">Enter the Number to start Playing</div>
+        <div class="result">
+        </div>
+        <button class="btn" id="restart" disabled >Restart</button>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
