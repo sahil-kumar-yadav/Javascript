@@ -26,4 +26,6 @@
 
 # Use Git bash to create multiple files
 
-# [project 4 Linl ](https://random-number-game.tiiny.site)
+# [project 4 Link ](https://random-number-game.tiiny.site)
+
+# [project 3 Link](https://digital-analog-clock.tiiny.site/)
