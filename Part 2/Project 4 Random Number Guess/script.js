@@ -56,7 +56,7 @@ function checkValid(guess) {
         win = false;
         showMsg("Game over");
         showResult();
-        gameRestart();
+        
 
     }
 }
