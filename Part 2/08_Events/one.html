@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Events</title>
+    <style>
+        body {
+            background: #323232;
+            color: white;
+
+        }
+
+        .ul {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        img {
+            border: 2px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Amazing Images</h2>
+    <ul class="ul" id="Images">
+        
+        <li><img src="./paris.jpg" alt="paris img" id="paris"
+                onclick="alert('img1 clicked using bad approch not scaleable')"></li>
+        <li><img src="./sunset.jpg" alt="sunset" id="sunset"></li>
+        <li><img src="./house.jpg" alt="house" id="house"></li>
+        <li><img src="./forest.jpg" alt="forest" id="forest"></li>
+        <li><a href="https://www.google.co.in/" style="color: white;" id="google">www.google.com</a></li>
+    </ul>
+</body>
+<script>
+    // old method
+    document.getElementById("sunset").onclick = function (e) {
+        alert('sunset img clicked by onclick')
+    }
+
+    // modern method
+    document.getElementById('house').addEventListener('click', function (e) {
+        // alert("house img is clicked by using event listener the latest method which has many functionality")
+        console.log(e); // browser ky events and environment ka event (mouse,cursor,etc)
+        // console.log(e.timeStamp)
+
+
+    }, false) // 3rd parameter by default false rahta hai 
+
+    // other methods
+    // attach Event
+    // jquery On
+
+
+    // events to study
+    // types,timestamps,defaultPrevented,
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+
+    // altkey , ctrlkey , shiftkey , keyCode, 
+
+
+    // event propogation 
+
+    // bubbling up - niche sy uper
+
+    // document.getElementById('house').addEventListener('click', function (e) {
+    //    console.log("house image clicked")
+    //     e.stopPropagation() // agar hum yeh karte hai bubbling nahi hogi
+    // }, false) 
+
+    // document.getElementById('Images').addEventListener('click', function (e) {
+    //    console.log("Clicked inside Images")
+
+    // }, false) 
+
+    // false vale case my bubbling up hogi that is niche sy uper i.e phele inside vali script run hogi than outside
+    
+    document.getElementById('house').addEventListener('click', function (e) {
+       console.log("house image clicked")
+
+    }, true) 
+
+    document.getElementById('Images').addEventListener('click', function (e) {
+       console.log("Clicked inside Images")
+
+    }, true) 
+
+    // true vale case my capturing hogi i.e phele outside script run hogi then inside
+
+    // prevetDefault
+
+    document.getElementById("google").addEventListener('click',function(e){
+        e.preventDefault(); // abh redirect nahi hoga
+        e.stopPropagation() // or koi script run na ho
+        console.log("google link clicked");
+    })
+
+    document.getElementById("Images").addEventListener('click',function(e){
+        // console.log(e.target); // jis element py click kiya vo return karega
+        console.log(e.target.parentNode); // jis element py click kiya uska parent return karega
+        console.log(e.target.tagName); // jis element py click kiya uska tagName return karega
+        if(e.target.tagName === "IMG"){
+            // sift li remove hoga even if instead of image we click on li other all ul is remove i.e all images will be removed
+            console.log(e.target.id)
+            let imgremove = e.target.parentNode;
+            imgremove.remove();
+        }
+       
+        
+        // method 2
+        // imgremove.parentNode.removeChild(imgremove)
+
+    })
+
+
+    
+
+
+</script>
+
+</html>
