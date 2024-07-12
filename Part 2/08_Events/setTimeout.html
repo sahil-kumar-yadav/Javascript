@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeOut And ClearTimeout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #212121;
+            color: white;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 72px;
+            background: -webkit-linear-gradient(#eee, #333);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn {
+            --b: 3px;
+            /* border thickness */
+            --s: .45em;
+            /* size of the corner */
+            --color: white;
+
+            padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+            color: var(--color);
+            --_p: var(--s);
+            background:
+                conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+            transition: .3s linear, color 0s, background-color 0s;
+            outline: var(--b) solid #0000;
+            outline-offset: .6em;
+            font-size: 16px;
+
+            border: 0;
+
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+
+        .btn:hover,
+        .btn:focus-visible {
+            --_p: 0px;
+            outline-color: var(--color);
+            outline-offset: .05em;
+        }
+
+        .btn:active {
+            background: var(--color);
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>My Name is Sahil Yadav</h1>
+        <div>
+            <button class="btn" id="stop">Stop</button>
+        </div>
+    </div>
+</body>
+<script>
+    const text = document.querySelector("h1")
+    const stop = document.querySelector("#stop")
+    
+    function changetxt() {
+        text.innerHTML = "I'm a Programmer - Developer";
+    }
+
+    const setTimeoutRef = setTimeout(changetxt,2000); 
+
+    stop.addEventListener('click', function () {
+        clearTimeout(setTimeoutRef)
+        alert("STOPPED")
+    })
+
+
+</script>
+
+</html>
