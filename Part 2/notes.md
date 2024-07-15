@@ -31,4 +31,29 @@
 # [project 3 Link](https://digital-analog-clock.tiiny.site/)
 
 
-// 4.00
+
+# 05:30:41  -  Promise in javscript
+- The fetch() function returns a Promise which is fulfilled with a Response object representing the server's response.
+
+- network sy agar 404 error atta hai to vo .then me jayega , kyuki error sirf tabh aata hai jab browser request he nahi kar pata 
+
+
+```javascript
+
+async function getData() {
+  const url = "https://example.org/products.json";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const json = await response.json();
+    console.log(json);
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+
+ ```
