@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+
+<body style="background-color: #212121;">
+    <h1>Hello</h1>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<!-- <script>
+    // function init() {
+    //     let name = "Mozilla"; // name is a local variable created by init
+    //     function displayName() {
+    //         // displayName() is the inner function, that forms the closure
+    //         console.log(name); // use variable declared in the parent function
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+    function outer() {
+        let username = "Sahil"
+        console.log(secret) // not accessable
+        function inner() {
+            let secret = "123"
+            console.log("inner", username);
+        }
+        function innerTwo() {
+            console.log("innerTwo", username);
+            console.log(secret) // not accessable
+        }
+        inner();
+    }
+    outer()
+    // console.log("Ouside",username) // error
+</script> -->
+
+<script>
+    // clousre 
+    function makeFunc() {
+        const name = "Mozilla";
+        function displayName() {
+            console.log(name);
+        }
+        return displayName;
+    }
+
+    const myFunc = makeFunc(); // name bhi sath my aayega // pura ka pura lexical score jata hai
+    myFunc(); // lexical scope return
+
+</script>
+
+
+<script>
+    // document.getElementById("orange").onclick = function(){
+    //     document.body.style.backgroundColor = "orange"
+    // }
+    // document.getElementById("gree").onclick = function(){
+    //     document.body.style.backgroundColor = "green"
+    // }
+    // 500 buttons then how
+
+    // practical use case 0
+    function clickHandler(color) {
+        return function() {
+            document.body.style.backgroundColor = color;
+        }
+    }
+
+    document.getElementById("orange").onclick = clickHandler("orange") // bina click kare he hogya
+    document.getElementById("green").onclick = clickHandler("green") // bina click kare he hogya
+
+</script>
+
+</html>
